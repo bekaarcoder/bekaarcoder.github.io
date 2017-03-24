@@ -82,8 +82,11 @@ section {
 
 .intro_container {
 	position: relative;
-	
-	padding: 0px 40px
+	padding: 0px 40px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-around;
 }
 
 .intro_content {
@@ -265,5 +268,20 @@ section {
 
 	.logos {
 		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-height: 900px) {
+	.expert_container {
+		padding: 0px 40px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-around;
+	}
+
+	.expert_content, .intro_content p {
+		line-height: 2rem;
+		font-size: 1.5rem;
 	}
 }
