@@ -241,3 +241,25 @@ section {
 	flex: 1;
 	text-align: center;
 }
+
+
+
+
+/*media screen*/
+@media only screen and (max-width: 600px) {
+	.intro_content, .intro_social {
+		width: 100%;
+	}
+
+	.social_icons {
+		width: 90%;
+	}
+
+	.intro_content h1 {
+		font-size: 1.5rem;
+	}
+
+	.intro_content p {
+		font-size: 1rem;
+	}
+}
