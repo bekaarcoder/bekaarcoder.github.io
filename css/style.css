@@ -83,10 +83,6 @@ section {
 .intro_container {
 	position: relative;
 	padding: 0px 40px;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: space-around;
 }
 
 .intro_content {
