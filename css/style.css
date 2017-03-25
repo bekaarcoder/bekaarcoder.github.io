@@ -100,17 +100,30 @@ section {
 }
 
 .intro_dp {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	padding: 5px;
-	background-color: #F7DD72;
+	background-color: #81B29A;
 	margin: 30px auto;
-	border: 1px solid #F7DD72;
+	border: 1px solid #81B29A;
 	border-radius: 50%;
 	overflow: hidden;
 }
 
+/*.intro_dp:before {
+	content: '';
+	background-color: #81B29A;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;	
+}*/
+
 .image_container {
+	position: relative;
 	width: 100%;
 	height: 100%;
 	margin: 0px auto;
@@ -161,8 +174,9 @@ section {
 }
 
 .next_btn button {
+	outline: none;
 	padding: 10px;
-	border: 3px solid #F7DD72;
+	border: 3px solid #81B29A;
 	background-color: rgba(1, 1, 1, 0);
 	color: white;
 	cursor: pointer;
