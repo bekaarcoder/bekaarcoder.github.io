@@ -21,4 +21,10 @@ $(document).ready(function(){
 		scroller('#skills');
 	});
 
+	$('.ico').hover(function(){
+		$('i', this).removeClass('colored').css('color', 'white');
+	}, function(){
+		$('i', this).addClass('colored').css('color', '');
+	});
+
 });
