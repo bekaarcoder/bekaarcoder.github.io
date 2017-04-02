@@ -264,6 +264,7 @@ section {
 	text-align: center;
 	color: #2A3A3F;
 	font-size: 2.5rem;
+	padding: 0px 50px;
 }
 
 .project_content {
@@ -347,9 +348,18 @@ section {
 		font-size: 2rem;
 	}
 
-	/*.project_footer span {
+	.project_footer span {
 		display: block;
-	}*/
+	}
+
+	.project_content {
+		display: block;
+	}
+
+	.project {
+		width: 90%;
+		margin: 0px auto;
+	}
 }
 
 @media only screen and (min-height: 900px) {
