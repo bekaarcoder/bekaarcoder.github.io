@@ -55,7 +55,6 @@ nav ul li a:hover {
 
 section {
 	width: 100%;
-	height: 100vh;
 }
 
 /* intro page start */
@@ -68,6 +67,7 @@ section {
 	background-position: center center;
 	text-align: center;
 	color: white;
+	height: 100vh;
 }
 
 .intro-page:before {
@@ -110,17 +110,6 @@ section {
 	border-radius: 50%;
 	overflow: hidden;
 }
-
-/*.intro_dp:before {
-	content: '';
-	background-color: #81B29A;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	opacity: 1;	
-}*/
 
 .image_container {
 	position: relative;
@@ -207,9 +196,12 @@ section {
 
 /* intro page end */
 
+/*expert page start*/
+
 .expert-page {
 	/*background-color: #CFCFCF;*/
-	background-color: #1E152A
+	background-color: #1E152A;
+	height: 100vh;
 }
 
 .expert_container {
@@ -255,11 +247,82 @@ section {
 	text-align: center;
 }
 
+/*expert page end*/
 
+/*project page start*/
+
+.project-page {
+	background-color: #EEEEEE;
+}
+
+.project_container {
+	position: relative;
+	padding: 20px 40px;
+}
+
+.project_header {
+	text-align: center;
+	color: #2A3A3F;
+	font-size: 2.5rem;
+}
+
+.project_content {
+	display: flex;
+	padding: 40px 50px;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.project {
+	padding: 20px;
+	width: 300px;
+	text-align: center;
+	color: #2A3A3F;
+}
+
+.project h2 {
+	font-size: 1.5rem;
+}
+
+.project_img {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.project_img img {
+	width: 30%;
+}
+
+.project_description {
+	color: #93a4aa;
+	text-align: center;
+}
+
+.project_footer {
+	padding: 20px 40px;
+	text-align: center;
+}
+
+.project_footer h3 {
+	font-size: 1.2rem;
+	color: #53676d;
+}
+
+.project_footer a {
+	color: #5EA4F7;
+	border-bottom: 1px dotted #5EA4F7;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.project_footer a:hover {
+	color: #0FA0CE;
+	border-bottom: 1px solid #0FA0CE;
+}
 
 
 /*media screen*/
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 705px) {
 	.intro_content, .intro_social, .expert_content, .logos {
 		width: 100%;
 	}
@@ -268,17 +331,25 @@ section {
 		width: 90%;
 	}
 
-	.intro_content h1, .expert_header {
+	.intro_content h1, .expert_header, .project_header {
 		font-size: 1.5rem;
 	}
 
-	.intro_content p, .expert_content {
+	.project h2 {
+		font-size: 1.2rem;
+	}
+
+	.intro_content p, .expert_content, .project_footer h3 {
 		font-size: 1rem;
 	}
 
 	.logos {
 		font-size: 2rem;
 	}
+
+	/*.project_footer span {
+		display: block;
+	}*/
 }
 
 @media only screen and (min-height: 900px) {
