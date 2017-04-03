@@ -31,10 +31,14 @@ $(document).ready(function(){
 		var elem = document.getElementById('work');
 		var pos = elem.offsetTop;
 		if($(window).scrollTop() >= pos){
-			console.log(1);
-			$('.project_img img').animate({width: '40%'}, 500, 'swing');
+			$('.project_img img').animate({transform: 'scale(1.1, 1.1)'}, {
+				step: function(){
+					$(this).css('transform', 'scale(1.1, 1.1)');
+				},
+				duration: 1000,
+				easing: 'linear'
+			});
 		}
-		console.log($(window).scrollTop());
 	}
 
 	window.onscroll = loadImages;
