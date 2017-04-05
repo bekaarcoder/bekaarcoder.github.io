@@ -21,22 +21,56 @@ header {
 }
 
 .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	color: white;
 	padding: 10px 20px;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .branding {
 
 }
 
+.image_bg {
+	position: absolute;
+	top: 5px;
+	left: 8px;
+}
+
+.image_fg {
+	position: relative;
+    left: -2px;
+    top: 2px;
+}
+
+.image_bg img {
+	animation: logo-rotate 5s infinite linear;
+}
+
+@keyframes logo-rotate {
+	0%, 5%     {-webkit-transform: rotate(0deg);}
+    25%,30%   {-webkit-transform: rotate(90deg);}
+    50%,55%   {-webkit-transform: rotate(180deg);}
+    75%,80%  {-webkit-transform: rotate(270deg);}
+    100%  {-webkit-transform: rotate(360deg);}
+}
+
 nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -46,6 +80,7 @@ nav ul li {
 
 nav ul li a {
 	color: white;
+	-webkit-transition: all 200ms;
 	transition: all 200ms;
 }
 
@@ -72,6 +107,7 @@ section {
 
 .intro-page:before {
 	content: '';
+	background-image: -webkit-linear-gradient(left, rgba(58, 64, 90, 0.5), rgba(113, 105, 105, 0.5));
 	background-image: linear-gradient(90deg, rgba(58, 64, 90, 0.5), rgba(113, 105, 105, 0.5));
 	position: absolute;
 	top: 0;
@@ -97,13 +133,25 @@ section {
 	white-space: nowrap;
 	margin: 0 auto;
 	border-right: .15em solid orange;
-	animation: typing 6s steps(30, end), blink-caret .75s step-end infinite;
+	-webkit-animation: typing 6s steps(30, end), blink-caret .75s step-end infinite;
+	        animation: typing 6s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+	0% { width: 0 }
+	10%, 50% { width: 12% }
+	100% { width: 100%}
 }
 
 @keyframes typing {
 	0% { width: 0 }
 	10%, 50% { width: 12% }
 	100% { width: 100%}
+}
+
+@-webkit-keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 @keyframes blink-caret {
@@ -134,6 +182,11 @@ section {
 	margin: 0px auto;
 	overflow: hidden;
 	border-radius: 50%;
+	transition: box-shadow 300ms;
+}
+
+.image_container:hover {
+	box-shadow: 0px 0px 0px 6px #FFFFFF;
 }
 
 .intro_dp img {
@@ -153,17 +206,22 @@ section {
 }
 
 .social_icons ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .social_icons ul li {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
 .social_icons a{
 	padding: 0px;
 	border: 0px;
 	border-radius: 5px;
+	-webkit-transition: all 200ms;
 	transition: all 200ms;
 }
 
@@ -185,6 +243,7 @@ section {
 	background-color: rgba(1, 1, 1, 0);
 	color: white;
 	cursor: pointer;
+	-webkit-transition: background-color 200ms;
 	transition: background-color 200ms;
 }
 
@@ -195,7 +254,20 @@ section {
 #angle-down {
 	position: relative;
 	cursor: pointer;
-	animation: moveangle 1s cubic-bezier(.33,.6,.6,1.5) infinite
+	-webkit-animation: moveangle 1s cubic-bezier(.33,.6,.6,1.5) infinite;
+	        animation: moveangle 1s cubic-bezier(.33,.6,.6,1.5) infinite
+}
+
+@-webkit-keyframes moveangle {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: 10px;
+	}
+	100% {
+		top: 0px;
+	}
 }
 
 @keyframes moveangle {
@@ -254,12 +326,16 @@ section {
 }
 
 .logos ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 10px;
 }
 
 .logos ul li {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	text-align: center;
 }
 
@@ -284,9 +360,12 @@ section {
 }
 
 .project_content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 40px 50px;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	text-align: center;
 }
 
@@ -308,8 +387,12 @@ section {
 
 .project_img img {
 	width: 30%;
-	transform: scale(0.8, 0.8);
+	-webkit-transform: scale(0.8, 0.8);
+	        transform: scale(0.8, 0.8);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .project_description {
@@ -383,10 +466,16 @@ section {
 @media only screen and (min-height: 900px) {
 	.expert_container {
 		padding: 0px 40px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		height: 100%;
-		justify-content: space-around;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 	}
 
 	.expert_content, .intro_content p {
