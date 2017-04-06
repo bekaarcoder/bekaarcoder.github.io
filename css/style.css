@@ -167,7 +167,7 @@ section {
 	position: relative;
 	width: 100px;
 	height: 100px;
-	padding: 5px;
+	padding: 6px;
 	background-color: #81B29A;
 	margin: 30px auto;
 	border: 1px solid #81B29A;
@@ -464,7 +464,7 @@ section {
 }
 
 @media only screen and (min-height: 900px) {
-	.expert_container {
+	.expert_container, .intro_container {
 		padding: 0px 40px;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -480,6 +480,10 @@ section {
 
 	.expert_content, .intro_content p {
 		line-height: 2rem;
-		font-size: 1.5rem;
+		font-size: 1.7rem;
+	}
+
+	.intro_content h1 {
+		font-size: 3rem;
 	}
 }

@@ -43,4 +43,14 @@ $(document).ready(function(){
 
 	window.onscroll = loadImages;
 
+	function parallax() {
+		var wScroll = $(window).scrollTop();
+
+		$('.parallax-bg').css('background-position', 'center ' + ((wScroll - 50) * 0.5) + 'px');
+	}
+
+	$(window).scroll(function(){
+		parallax();
+	})
+
 });
