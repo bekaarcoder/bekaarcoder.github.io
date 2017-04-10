@@ -105,7 +105,7 @@ section {
 	height: 100vh;
 }
 
-.intro-page:before {
+.intro-page:before{
 	content: '';
 	background-image: -webkit-linear-gradient(left, rgba(58, 64, 90, 0.5), rgba(113, 105, 105, 0.5));
 	background-image: linear-gradient(90deg, rgba(58, 64, 90, 0.5), rgba(113, 105, 105, 0.5));
@@ -420,6 +420,43 @@ section {
 .project_footer a:hover {
 	color: #0FA0CE;
 	border-bottom: 1px solid #0FA0CE;
+}
+
+/*other skills*/
+
+.other-skill {
+	background-image: url(../img/art-cover.jpg);
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	color: white;
+	height: 100vh;
+}
+
+.other-skill:before {
+	content: '';
+	background-image: linear-gradient(90deg, rgba(32, 80, 129, 0.65), rgba(12, 12, 23, 0.58));
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.skill_container {
+	position: relative;
+	padding: 20px 40px;
+}
+
+.skill_header {
+	margin: 20px auto;
+}
+
+.skill_header h1 {
+	padding-top: 20px;
+	font-size: 2.5rem;
 }
 
 
