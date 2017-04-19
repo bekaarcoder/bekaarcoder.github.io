@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
 body, 
 h1, h2, h3, h4, h5, h6, 
 ul, li, button {
@@ -432,7 +434,7 @@ section {
 	background-position: center center;
 	text-align: center;
 	color: white;
-	height: 100vh;
+	height: auto;
 }
 
 .other-skill:before {
@@ -457,6 +459,46 @@ section {
 .skill_header h1 {
 	padding-top: 20px;
 	font-size: 2.5rem;
+}
+
+.skill_content {
+	margin: 30px auto;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.imgbox {
+	width: 250px;
+	padding: 10px;
+	overflow: none;
+	position: relative;
+	transition: transform 0.5s ease-in-out;
+}
+
+.imgbox:before {
+	content: '';
+	position: absolute;
+	background-image: linear-gradient(90deg, rgba(32, 80, 129, 0.3), rgba(12, 12, 23, 0.3));
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/*opacity: 0.3;*/
+	transition: opacity 0.5s ease-in-out;
+}
+
+.imgbox img {
+	width: 100%;
+}
+
+.imgbox:hover {
+	transform: scale(1.1, 1.1);	
+}
+
+.imgbox:hover::before {
+	opacity: 0.1;
 }
 
 
