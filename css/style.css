@@ -698,4 +698,18 @@ section {
 	.intro_content h1 {
 		font-size: 1.5rem;
 	}
+
+	.skill_footer {
+		padding: 20px;
+	}
+
+	.skill_footer button {
+		width: 200px;
+		font-size: 0.8rem;
+		padding: 10px;
+	}
+
+	.skill_footer button:hover {
+		width: 250px;
+	}
 }
