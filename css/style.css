@@ -689,10 +689,17 @@ section {
 	}
 
 	.branding .image_bg {
-		left: -5px;
+		left: 0;
 		right: 0;
+		top: 5px;
 		margin: 0 auto;
 		text-align: center;
+	}
+
+	.branding .image_fg {
+	    position: relative;
+	    left: 0;
+	    top: 2px;
 	}
 
 	.intro_content h1 {
