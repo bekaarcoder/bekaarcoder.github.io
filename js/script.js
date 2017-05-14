@@ -41,7 +41,7 @@ $(document).ready(function(){
 		}
 	}
 
-	// window.onscroll = loadImages;
+	window.onscroll = loadImages;
 
 	// function parallax() {
 	// 	var wScroll = $(window).scrollTop();
