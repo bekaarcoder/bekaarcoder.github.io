@@ -4,7 +4,7 @@ $(document).ready(function () {
             {
                 scrollTop: $(hash).offset().top,
             },
-            500,
+            200,
             'swing',
             function () {
                 window.location.hash = hash;
