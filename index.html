@@ -1,224 +1,630 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Shashank's Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
-</head>
-<body>
-<header>
-	<div class="container">
-		<div class="branding">
-			<div class="image_bg">
-				<img src="img/hex.png" width="40px">
-			</div>
-			<div class="image_fg">
-				<img src="img/logo1.png" width="20px">
-			</div>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#skills">My Expertise</a></li>
-				<li><a href="#work">My Work</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Shashank's Portfolio</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Saira+Extra+Condensed:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+        <!-- Devicons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar navbar-expand-lg bg-dark fixed-top side-nav px-2"
+            data-bs-theme="dark"
+        >
+            <a class="navbar-brand" href="#">
+                <div class="d-lg-none d-flex align-items-center">
+                    <img
+                        src="img/dp.jpg"
+                        alt="Profile Picture"
+                        width="32"
+                        class="img-fluid rounded-circle border border-2 border-warning"
+                    />
+                    <span class="ms-2"> Shashank </span>
+                </div>
+                <div class="d-none d-lg-block pb-3">
+                    <img
+                        src="img/dp.jpg"
+                        alt="Profile Picture"
+                        class="img-fluid img-profile rounded-circle border border-5 border-warning"
+                    />
+                </div>
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="#about"
+                            >About</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#interests">Interests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://bekaarcoder.xyz/"
+                            target="_blank"
+                            >Blog</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<!-- home page starts -->
-<div id="parallax-img"></div>
-<section class="intro-page parallax-bg" id="home">
-	<div class="intro_container">
-		<div class="intro_content">
-			<h1>Hi! My name is Shashank.</h1>
-			<p>
-				I am a Web Developer and I design and build websites. And when I don't, I do random stuff.<br/><br/>
-				I've a diverse set of skills, ranging from HTML+CSS+Javascript, all the way to PHP, NodeJS, MySQL and NoSQL (MongoDB).
-			</p>
-		</div>
-		<div class="intro_dp">
-			<div class="image_container">
-				<img src="img/dp.jpg" alt="Profile Image">
-			</div>
-		</div>
-		<div class="intro_social">
-			<div class="social_icons">
-				<ul>
-					<li><a href="https://www.facebook.com/shashanksmaty" target="_blank"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a></li>
-					<li><a href="https://twitter.com/ShashankSmaty" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
-					<li><a href="https://github.com/shashanksmaty" target="_blank"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/shashank-59713571/" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com/shashank_xyz" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="next_btn" id="next_page">
-			<button>Learn More About Me</button>
-			<p id="angle-down"><i class="fa fa-angle-double-down fa-lg" aria-hidden="true"></i></p>
-		</div>
-	</div>
-</section>
+        <div class="container-fluid">
+            <!-- About -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center"
+                id="about"
+            >
+                <div class="col-md-10">
+                    <h1 class="display-1">SHASHANK</h1>
+                    <p class="lead sub-heading">
+                        NEW DELHI, IN
+                        <span class="primary-text"
+                            ><a
+                                href="mailto:shashank.basant@gmail.com"
+                                class="text-reset text-decoration-none"
+                                >SHASHANK.BASANT@GMAIL.COM</a
+                            ></span
+                        >
+                    </p>
+                    <p class="lead">
+                        Seasoned Automation Test Engineer with 7+ years of
+                        experience using tools like Selenium WebDriver and
+                        Playwright.
+                    </p>
+                    <p class="lead">
+                        Enthusiastic about continual learning, I explore
+                        full-stack development, showcasing skills in HTML, CSS,
+                        JavaScript, React JS, Java, NodeJS, MySQL, and MongoDB
+                        during my free time.
+                    </p>
+                    <p class="lead">
+                        I also contribute to the tech community through
+                        insightful blogs.
+                    </p>
+                    <p class="lead">
+                        Beyond coding, I love exploring the unexpected and
+                        embracing the joy of randomness.
+                    </p>
+                    <p class="lead">
+                        Join me on this dynamic journey of technology and
+                        creativity!
+                    </p>
+                    <div class="pt-4">
+                        <a
+                            href="https://github.com/bekaarcoder"
+                            target="_blank"
+                            class="social-icon"
+                        >
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                            href="https://twitter.com/bekaarcoder"
+                            target="_blank"
+                            class="social-icon ms-3"
+                        >
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/banda_bekaar/"
+                            target="_blank"
+                            class="social-icon ms-3"
+                        >
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/shashank-59713571/"
+                            target="_blank"
+                            class="social-icon ms-3"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://bekaarcoder.xyz/"
+                            target="_blank"
+                            class="social-icon ms-3"
+                        >
+                            <i class="bi bi-browser-safari"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-<!-- home page ends -->
+            <!-- Skills -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center"
+                id="skills"
+            >
+                <div class="col-md-10">
+                    <h2 class="display-2">SKILLS</h2>
+                    <h4 class="mt-4">PROGRAMMING LANGUAGES & TOOLS</h4>
+                    <div class="logos mt-2">
+                        <ul class="list-inline">
+                            <li class="list-inline-items ico">
+                                <i class="devicon-html5-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-css3-plain"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-react-original colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-typescript-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-nextjs-original colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-java-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-nodejs-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-express-original colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-mysql-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-mongodb-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-firebase-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-spring-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-postgresql-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-docker-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i
+                                    class="devicon-selenium-original colored"
+                                ></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-git-plain colored"></i>
+                            </li>
+                            <li class="list-inline-items ico">
+                                <i class="devicon-gitlab-plain colored"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<!-- skill page starts -->
+            <!-- Experience -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center py-5"
+                id="experience"
+            >
+                <div class="col-md-10">
+                    <h2 class="display-2">EXPERIENCE</h2>
+                    <!-- S&P Global -->
+                    <div class="d-flex justify-content-between">
+                        <div class="position">
+                            <h2>SQA ENGINEER</h2>
+                            <h4 class="muted-text">S&P GLOBAL</h4>
+                        </div>
+                        <div class="timeline">
+                            <p class="lead primary-text">
+                                March 2022 - Present
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                Collaborating globally on financial software
+                                testing.
+                            </li>
+                            <li>
+                                Led automation efforts using JavaScript,
+                                Playwright, and Cucumber for efficient test
+                                scripting.
+                            </li>
+                            <li>
+                                Integrated automation with version control in
+                                GitLab, streamlining test execution and result
+                                analysis.
+                            </li>
+                            <li>
+                                Conducted manual testing of critical
+                                functionalities, adept at defect
+                                identification/reporting using JIRA.
+                            </li>
+                            <li>
+                                Proficient in database testing, designing, and
+                                executing SQL queries.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Accenture -->
+                    <div class="d-flex justify-content-between mt-5">
+                        <div class="position">
+                            <h2>Application Development Senior Analyst</h2>
+                            <h4 class="muted-text">
+                                Accenture Solutions Pvt. Ltd.
+                            </h4>
+                        </div>
+                        <div class="timeline">
+                            <p class="lead primary-text">
+                                January 2016 - March 2022
+                            </p>
+                        </div>
+                    </div>
+                    <p class="lead">
+                        Project Domains - Banking, Commodity Trading, Retail
+                        E-commerce
+                    </p>
+                    <ul>
+                        <li>
+                            Developed and maintained automated test scripts
+                            using Java and Selenium WebDriver with TestNG.
+                        </li>
+                        <li>
+                            Conducted API automation testing with JavaScript and
+                            Postman for RESTful APIs.
+                        </li>
+                        <li>
+                            Executed automated test cases and reported defects
+                            in Azure DevOps.
+                        </li>
+                        <li>
+                            Played a key role in creating test plans, design,
+                            preparation, executing test cases, and defect
+                            logging.
+                        </li>
+                        <li>
+                            Collaborated with business analysts and developers
+                            to clarify requirements and resolve issues.
+                        </li>
+                        <li>
+                            Reviewed test scripts based on testing standards and
+                            maintained regular interaction with clients for
+                            demonstration and requirement gathering.
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-<section class="expert-page" id="skills">
-	<div class="expert_container">
-		<h1 class="expert_header">Skills</h1>
-		<div class="expert_content">
-			<p>I design and code in the browser with HTML(5), CSS(3) and Javascript. I love doing things from scratch but I can also work with front-end frameworks like Bootstrap, Foundation and jQuery too.</p>
-			<p>Also, I have a wide range of skills that include server-side technologies like PHP, NodeJS and database technology like MySQL. I've also stated to work with javascript frameworks like AngularJS and NoSQL database like MongoDB and Firebase.</p>
-		</div>
-		<div class="logos">
-			<ul>
-				<li class="ico"><i class="devicon-html5-plain-wordmark colored"></i></li>
-				<li class="ico"><i class="devicon-css3-plain-wordmark colored"></i></li>
-				<li class="ico"><i class="devicon-javascript-plain colored"></i></li>
-				<li class="ico"><i class="devicon-php-plain colored"></i></li>
-				<li class="ico"><i class="devicon-mysql-plain-wordmark colored"></i></li>
-			</ul>
-			<ul>
-				<li class="ico"><i class="devicon-angularjs-plain colored"></i></li>
-				<li class="ico"><i class="devicon-nodejs-plain colored"></i></li>
-				<li class="ico"><i class="devicon-mongodb-plain-wordmark colored"></i></li>
-				<li class="ico"><i class="devicon-jquery-plain-wordmark colored"></i></li>
-				<li class="ico"><i class="devicon-bootstrap-plain-wordmark colored"></i></li>
-			</ul>
-		</div>
-	</div>
-</section>
+            <!-- Projects -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center py-5"
+                id="projects"
+            >
+                <div class="col-md-10">
+                    <h2 class="display-2">PROJECTS</h2>
+                    <div class="row">
+                        <!-- Project 1 -->
+                        <div class="col-md-6 my-3">
+                            <div class="card h-100">
+                                <img
+                                    src="img/game-hub.png"
+                                    alt="Game Hub"
+                                    class="card-img-top"
+                                />
+                                <div class="card-body">
+                                    <h3>GameHub</h3>
+                                    <p class="card-text">
+                                        React application with TypeScript that
+                                        leverages the rawg.io API for
+                                        discovering, searching, and exploring
+                                        the latest games across different
+                                        devices.
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="stack">
+                                            <i
+                                                class="devicon-react-original colored"
+                                            ></i>
 
-<!-- skill page ends -->
+                                            <i
+                                                class="devicon-typescript-plain colored"
+                                            ></i>
+                                        </div>
+                                        <div class="source-code">
+                                            <a
+                                                href="https://github.com/bekaarcoder/react-ts-gamehub"
+                                                target="_blank"
+                                                class="text-reset text-decoration-none d-flex align-items-center"
+                                            >
+                                                <i
+                                                    class="devicon-github-original colored"
+                                                ></i>
+                                                <span class="ms-1"
+                                                    >Source Code</span
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="col-md-6 my-3">
+                            <div class="card h-100">
+                                <img
+                                    src="img/notes-app.png"
+                                    alt="Notes App"
+                                    class="card-img-top"
+                                />
+                                <div class="card-body">
+                                    <h3>Notes App</h3>
+                                    <p class="card-text">
+                                        A full-stack Note Taking application
+                                        developed using the MERN stack.
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="stack">
+                                            <i
+                                                class="devicon-mongodb-plain colored"
+                                            ></i>
 
-<!-- Project page starts -->
-<section class="project-page" id="work">
-	<div class="project_container">
-		<h1 class="project_header">Some of my Work</h1>
-		<div class="project_content">
-			<div class="project">
-				<h2>Photo Uploader/Gallery</h2>
-				<div class="project_img">
-					<img src="img/gallery.png">
-				</div>
-				<div class="project_description">
-					<p>A photo uploader/gallery app to upload, view and manage the images uploaded.
-					<br>
-					Created using Firebase and AngularJS.
-					</p>
-				</div>
-			</div>
-			<div class="project">
-				<h2>Audio Player</h2>
-				<div class="project_img">
-					<img src="img/player.png">
-				</div>
-				<div class="project_description">
-					<p>An HTML5 audio player app that can play music and create a playlist of songs.
-					<br>
-					Created using HTML5 javascript audio API.
-					</p>
-				</div>
-			</div>
-			<div class="project">
-				<h2>Shopping Cart</h2>
-				<div class="project_img">
-					<img src="img/cart.png">
-				</div>
-				<div class="project_description">
-					<p>A simple shopping cart app to add the products into the cart along with the total amount.
-					<br>
-					Created using AngularJS and Javascript.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="project_content">
-			<div class="project">
-				<h2>Angular Quiz</h2>
-				<div class="project_img">
-					<img src="img/quiz.png">
-				</div>
-				<div class="project_description">
-					<p>A simple quiz application to practice, analyze performance and improve skills.
-					<br>
-					Created using AngularJS and HTML5 Javascript charts.
-					</p>
-				</div>
-			</div>
-			<div class="project">
-				<h2>Firebase Blog</h2>
-				<div class="project_img">
-					<img src="img/blog.png">
-				</div>
-				<div class="project_description">
-					<p>Blogging platform to add, edit and delete posts with login and registration functionality.
-					<br>
-					Created using AngularJS and Firebase.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="project_footer">
-			<h3>Want to see more projects? <span>Check out my <a href="https://github.com/shashanksmaty" target="_blank">Github</a> and <a href="http://codepen.io/shashanksmaty/" target="_blank">Codepen</a> profile.</span></h3>
-		</div>
-	</div>
-</section>
+                                            <i
+                                                class="devicon-express-original colored"
+                                            ></i>
 
-<!-- Project page ends -->
+                                            <i
+                                                class="devicon-react-original colored"
+                                            ></i>
 
-<!-- Other skills page -->
-<section class="other-skill">
-	<div class="skill_container">
-		<div class="skill_header">
-			<h3>In my free time, I like to spend it creatively.</h3>
-			<h1>Some of my Creative Work</h1>
-		</div>
-		<div class="skill_content">
-			<div class="imgbox">
-				<img src="img/arts/3.jpg">
-			</div>
-			<div class="imgbox">
-				<img src="img/arts/1.jpg">
-			</div>
-			<div class="imgbox">
-				<img src="img/arts/2.jpg">
-			</div>
-			<div class="imgbox">
-				<img src="img/arts/4.jpg">
-			</div>
-		</div>
-		<div class="skill_footer">
-			<a href="http://www.touchtalent.com/artist/22763/shashank-smaty" target="_blank"><button>View More on Touchtalent</button></a>
-		</div>
-	</div>
-</section>
+                                            <i
+                                                class="devicon-nodejs-plain colored"
+                                            ></i>
+                                        </div>
+                                        <div class="source-code">
+                                            <a
+                                                href="https://github.com/bekaarcoder/notes-app-ts"
+                                                target="_blank"
+                                                class="text-reset text-decoration-none d-flex align-items-center"
+                                            >
+                                                <i
+                                                    class="devicon-github-original colored"
+                                                ></i>
+                                                <span class="ms-1"
+                                                    >Source Code</span
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="col-md-6 my-3">
+                            <div class="card h-100">
+                                <img
+                                    src="img/periodic-table.png"
+                                    alt="Periodic Table"
+                                    class="card-img-top"
+                                />
+                                <div class="card-body">
+                                    <h3>Periodic Table</h3>
+                                    <p class="card-text">
+                                        Periodic Table created using CSS Grid.
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="stack">
+                                            <i
+                                                class="devicon-html5-plain colored"
+                                            ></i>
 
-<!-- Other skills page end -->
+                                            <i
+                                                class="devicon-css3-plain colored"
+                                            ></i>
+                                        </div>
+                                        <div class="source-code">
+                                            <a
+                                                href="https://github.com/bekaarcoder/periodic-table-css"
+                                                target="_blank"
+                                                class="text-reset text-decoration-none d-flex align-items-center"
+                                            >
+                                                <i
+                                                    class="devicon-github-original colored"
+                                                ></i>
+                                                <span class="ms-1"
+                                                    >Source Code</span
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 4 -->
+                        <div class="col-md-6 my-3">
+                            <div class="card h-100">
+                                <img
+                                    src="img/contact-manager.png"
+                                    alt="Contact Manager"
+                                    class="card-img-top"
+                                />
+                                <div class="card-body">
+                                    <h3>Contact Manager</h3>
+                                    <p class="card-text">
+                                        Contact Manager app created using
+                                        SpringBoot for managing the contacts.
+                                    </p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="stack">
+                                            <i
+                                                class="devicon-spring-plain colored"
+                                            ></i>
 
-<!-- Page footer -->
-<section class="page-footer" id="contact">
-	<div class="footer_container">
-		<div class="logo_container">
-			<div class="img_fg">
-				<img src="img/logo1.png">
-			</div>
-			<div class="img_bg">
-				<img src="img/hex.png" width="60px">
-			</div>
-		</div>
-		<h3><p>Get in touch with me : <a href="mailto:s_shashank@outlook.com">s_shashank@outlook.com</a></p></h3>
-	</div>
-	<div class="footer">
-		Handmade with <i class="fa fa-heart" aria-hidden="true" style="color: #c1292e;"></i> by me &copy;<span id="currYear"></span>
-	</div>
-</section>
+                                            <i
+                                                class="devicon-mysql-plain colored"
+                                            ></i>
+                                        </div>
+                                        <div class="source-code">
+                                            <a
+                                                href="https://github.com/bekaarcoder/spring-contact-manager"
+                                                target="_blank"
+                                                class="text-reset text-decoration-none d-flex align-items-center"
+                                            >
+                                                <i
+                                                    class="devicon-github-original colored"
+                                                ></i>
+                                                <span class="ms-1"
+                                                    >Source Code</span
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
+            <!-- Education -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center"
+                id="education"
+            >
+                <div class="col-md-10">
+                    <h2 class="display-2">EDUCATION</h2>
+                    <div class="d-flex justify-content-between my-5">
+                        <div class="position">
+                            <h2>AMITY UNIVERSITY</h2>
+                            <h4 class="muted-text">
+                                B.Tech (Computer Science & Engineering)
+                            </h4>
+                        </div>
+                        <div class="timeline">
+                            <p class="lead primary-text">
+                                July 2011 - June 2015
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="position">
+                            <h2>DAV Public School</h2>
+                            <h4 class="muted-text">Science (PCM)</h4>
+                        </div>
+                        <div class="timeline">
+                            <p class="lead primary-text">
+                                May 2009 - April 2011
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests -->
+            <div
+                class="row min-vh-100 align-items-center justify-content-center"
+                id="interests"
+            >
+                <div class="col-md-10">
+                    <h2 class="display-2 mb-5">INTERESTS & ACHIEVEMENTS</h2>
+                    <p class="lead">
+                        <i class="bi bi-award"></i>
+                        <span class="muted-text"
+                            >GEM (Going the Extra Mile) Award - </span
+                        >Recognized for exceptional contributions to the S&P
+                        Global project.
+                    </p>
+                    <p class="lead">
+                        <i class="bi bi-trophy"></i>
+                        <span class="muted-text">Certifications - </span>Vskills
+                        Certified Selenium Professional, AWS Certified Cloud
+                        Practitioner
+                    </p>
+                    <p class="lead">
+                        <i class="bi bi-bookshelf"></i>
+                        <span class="muted-text">Literary Pursuits - </span>Avid
+                        reader with a penchant for books and mangas.
+                    </p>
+                    <p class="lead">
+                        <i class="bi bi-palette"></i>
+                        <span class="muted-text">Arts & Entertainment - </span
+                        >Enthusiastic sketch artist. Enjoy watching anime,
+                        exploring diverse worlds and storytelling through the
+                        animated lens.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>

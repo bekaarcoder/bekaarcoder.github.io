@@ -1,82 +1,92 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    function scroller(hash) {
+        $('html, body').animate(
+            {
+                scrollTop: $(hash).offset().top,
+            },
+            500,
+            'swing',
+            function () {
+                window.location.hash = hash;
+            }
+        );
+    }
 
+    $('a').on('click', function (event) {
+        if (this.hash != '') {
+            event.preventDefault();
+            var hash = this.hash;
+            $('a').removeClass('active');
+            $(this).addClass('active');
+            scroller(hash);
+        }
+    });
 
-	function scroller(hash) {
-		$('html, body').animate({
-			scrollTop: $(hash).offset().top
-		}, 1000, 'swing', function(){
-			window.location.hash = hash;
-		});
-	}
+    $('#next_page').on('click', function () {
+        scroller('#skills');
+    });
 
-	$('a').on('click', function(event){
-		if(this.hash != ''){
-			event.preventDefault();
-			var hash = this.hash;
-			scroller(hash);
-		}
-	});
+    $('.ico').hover(
+        function () {
+            $('i', this).removeClass('colored').css('color', '#E3B23C');
+        },
+        function () {
+            $('i', this).addClass('colored').css('color', '');
+        }
+    );
 
-	$('#next_page').on('click', function(){
-		scroller('#skills');
-	});
+    function loadImages() {
+        var elem = document.getElementById('work');
+        var pos = elem.offsetTop;
+        if ($(window).scrollTop() >= pos) {
+            $('.project_img img').animate(
+                { transform: 'scale(1.1, 1.1)' },
+                {
+                    step: function () {
+                        $(this).css('transform', 'scale(1.1, 1.1)');
+                    },
+                    duration: 1000,
+                    easing: 'linear',
+                }
+            );
+        }
+    }
 
-	$('.ico').hover(function(){
-		$('i', this).removeClass('colored').css('color', 'white');
-	}, function(){
-		$('i', this).addClass('colored').css('color', '');
-	});
+    window.onscroll = loadImages;
 
-	function loadImages(){
-		var elem = document.getElementById('work');
-		var pos = elem.offsetTop;
-		if($(window).scrollTop() >= pos){
-			$('.project_img img').animate({transform: 'scale(1.1, 1.1)'}, {
-				step: function(){
-					$(this).css('transform', 'scale(1.1, 1.1)');
-				},
-				duration: 1000,
-				easing: 'linear'
-			});
-		}
-	}
+    // function parallax() {
+    // 	var wScroll = $(window).scrollTop();
 
-	window.onscroll = loadImages;
+    // 	$('.parallax-bg').css('background-position', 'center ' + ((wScroll - 50) * 0.5) + 'px');
+    // }
 
-	// function parallax() {
-	// 	var wScroll = $(window).scrollTop();
-
-	// 	$('.parallax-bg').css('background-position', 'center ' + ((wScroll - 50) * 0.5) + 'px');
-	// }
-
-	// $(window).scroll(function(){
-	// 	parallax();
-	// })
-
+    // $(window).scroll(function(){
+    // 	parallax();
+    // })
 });
 
-	var d = new Date();
-	var y = d.getFullYear();
-	document.getElementById('currYear').innerHTML = y;
+var d = new Date();
+var y = d.getFullYear();
+document.getElementById('currYear').innerHTML = y;
 
-	// parallax-scroll
+// parallax-scroll
 
-	window.addEventListener("DOMContentLoaded", scrollLoop, false);
+window.addEventListener('DOMContentLoaded', scrollLoop, false);
 
-	var parallaximg = document.querySelector("#parallax-img");
+var parallaximg = document.querySelector('#parallax-img');
 
-	var xScrollPos;
-	var yScrollPos;
+var xScrollPos;
+var yScrollPos;
 
-	function scrollLoop(e) {
-		xScrollPos = window.scrollX;
-		yScrollPos = window.scrollY;
+function scrollLoop(e) {
+    xScrollPos = window.scrollX;
+    yScrollPos = window.scrollY;
 
-		setTranslate(0, yScrollPos * -0.5, parallaximg);
+    setTranslate(0, yScrollPos * -0.5, parallaximg);
 
-		requestAnimationFrame(scrollLoop);
-	}
+    requestAnimationFrame(scrollLoop);
+}
 
-	function setTranslate(xPos, yPos, el){
-		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
-	}
+function setTranslate(xPos, yPos, el) {
+    el.style.transform = 'translate3d(' + xPos + ', ' + yPos + 'px, 0)';
+}
