@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(function () {
     function scroller(hash) {
         $('html, body').animate(
             {
